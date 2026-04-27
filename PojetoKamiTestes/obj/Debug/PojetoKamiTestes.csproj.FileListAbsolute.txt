@@ -1,0 +1,29 @@
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\bin\Debug\PojetoKamiTestes.exe.config
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\bin\Debug\PojetoKamiTestes.exe
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\bin\Debug\PojetoKamiTestes.pdb
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.csproj.AssemblyReference.cache
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.CriarPedido.resources
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.Financeiro.resources
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.Frm_principal.resources
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.GerenciamentoFuncionarios.resources
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.Pedidoandamento.resources
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.Properties.Resources.resources
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.csproj.GenerateResource.cache
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.csproj.CoreCompileInputs.cache
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.exe
+C:\Users\Privacy Devide\source\repos\PojetoKamiTestes\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.pdb
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\bin\Debug\PojetoKamiTestes.exe.config
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\bin\Debug\PojetoKamiTestes.exe
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\bin\Debug\PojetoKamiTestes.pdb
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.csproj.AssemblyReference.cache
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.exe.config
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.CriarPedido.resources
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.Financeiro.resources
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.Frm_principal.resources
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.GerenciamentoFuncionarios.resources
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.Pedidoandamento.resources
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.Properties.Resources.resources
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.csproj.GenerateResource.cache
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.csproj.CoreCompileInputs.cache
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.exe
+C:\Users\luciana.rgirao\Source\Repos\ProjetoKamiTeste1\PojetoKamiTestes\obj\Debug\PojetoKamiTestes.pdb
