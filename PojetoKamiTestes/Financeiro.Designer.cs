@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Financeiro));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DataPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -48,6 +44,10 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_resetSenha = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DataPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumeroPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPagamento = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,63 +59,37 @@
             this.DataPedido,
             this.NumeroPedido,
             this.Valor,
-            this.Pagamento});
-            this.dataGridView1.Location = new System.Drawing.Point(195, 121);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.colPagamento});
+            this.dataGridView1.Location = new System.Drawing.Point(93, 121);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 480);
+            this.dataGridView1.Size = new System.Drawing.Size(547, 480);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // DataPedido
-            // 
-            this.DataPedido.HeaderText = "Data do Pedido";
-            this.DataPedido.MinimumWidth = 6;
-            this.DataPedido.Name = "DataPedido";
-            this.DataPedido.Width = 125;
-            // 
-            // NumeroPedido
-            // 
-            this.NumeroPedido.HeaderText = "Nº do pedido";
-            this.NumeroPedido.MinimumWidth = 6;
-            this.NumeroPedido.Name = "NumeroPedido";
-            this.NumeroPedido.Width = 125;
-            // 
-            // Valor
-            // 
-            this.Valor.HeaderText = "Valor";
-            this.Valor.MinimumWidth = 6;
-            this.Valor.Name = "Valor";
-            this.Valor.Width = 125;
-            // 
-            // Pagamento
-            // 
-            this.Pagamento.HeaderText = "Forma de pagamento";
-            this.Pagamento.MinimumWidth = 6;
-            this.Pagamento.Name = "Pagamento";
-            this.Pagamento.Width = 125;
             // 
             // btnAdicionar
             // 
             this.btnAdicionar.Location = new System.Drawing.Point(682, 184);
-            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(56, 49);
+            this.btnAdicionar.Size = new System.Drawing.Size(72, 49);
             this.btnAdicionar.TabIndex = 1;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(682, 254);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(56, 46);
+            this.btnEditar.Size = new System.Drawing.Size(72, 46);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -123,22 +97,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcluir.Location = new System.Drawing.Point(682, 331);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(53, 46);
+            this.btnExcluir.Size = new System.Drawing.Size(72, 46);
             this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnLimpar
             // 
             this.btnLimpar.Location = new System.Drawing.Point(682, 397);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(56, 53);
+            this.btnLimpar.Size = new System.Drawing.Size(72, 53);
             this.btnLimpar.TabIndex = 4;
-            this.btnLimpar.Text = "LImpar";
+            this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // menuStrip1
             // 
@@ -245,6 +221,37 @@
             this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.sAIRToolStripMenuItem.Text = "SAIR";
             // 
+            // DataPedido
+            // 
+            this.DataPedido.HeaderText = "Data do Pedido";
+            this.DataPedido.MinimumWidth = 6;
+            this.DataPedido.Name = "DataPedido";
+            this.DataPedido.Width = 125;
+            // 
+            // NumeroPedido
+            // 
+            this.NumeroPedido.HeaderText = "Nº do pedido";
+            this.NumeroPedido.MinimumWidth = 6;
+            this.NumeroPedido.Name = "NumeroPedido";
+            this.NumeroPedido.Width = 125;
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor";
+            this.Valor.MinimumWidth = 6;
+            this.Valor.Name = "Valor";
+            this.Valor.Width = 125;
+            // 
+            // colPagamento
+            // 
+            this.colPagamento.HeaderText = "Forma de pagamento";
+            this.colPagamento.Items.AddRange(new object[] {
+            "Pix",
+            "Dinheiro",
+            "Cartão Débito",
+            "Cartão Crédito"});
+            this.colPagamento.Name = "colPagamento";
+            // 
             // Financeiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,7 +264,7 @@
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "Financeiro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -274,10 +281,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataPedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroPedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pagamento;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
@@ -292,5 +295,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem btn_resetSenha;
         private System.Windows.Forms.ToolStripMenuItem sAIRToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colPagamento;
     }
 }
