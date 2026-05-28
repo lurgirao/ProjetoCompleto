@@ -15,7 +15,6 @@ namespace PojetoKamiTestes
 {
     public partial class CriarPedido : Form
     {
-        // ✅ AQUI SIM (dentro da classe)
         Pedidoandamento telaPedidos;
 
         Dictionary<string, (double preco, int quantidade)> pedido =
@@ -34,6 +33,16 @@ namespace PojetoKamiTestes
                     LimparCheckboxes(ctrl);
                 }
             }
+        }
+
+        // 👇 AQUI É ONDE VOCÊ VAI COLOCAR O MÉTODO NOVO
+
+        private string ObterFormaPagamento()
+        {
+            if (checkedListBox1.CheckedItems.Count == 0)
+                return "Pix";
+
+            return checkedListBox1.CheckedItems[0].ToString();
         }
         public CriarPedido()
         {
@@ -203,14 +212,23 @@ namespace PojetoKamiTestes
                 Itens = copiaPedido,
                 Total = total,
                 DataHora = DateTime.Now,
-                FormaPagamento = "Não informado"
+                FormaPagamento = ObterFormaPagamento()
             };
+
+            PedidoStore.Pedidos.Add(novoPedido);
 
             telaPedidos.AdicionarPedido(novoPedido);
 
             LimparCheckboxes(this);
             pedido.Clear();
             panelDados.Controls.Clear();
+
+            Financeiro financeiro = Financeiro.Instancia;
+
+            if (financeiro != null)
+            {
+                financeiro.AdicionarPedidoFinanceiro(novoPedido);
+            }
 
         }
 

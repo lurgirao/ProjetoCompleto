@@ -123,26 +123,18 @@ namespace PojetoKamiTestes
             {
                 if (painel.Tag is PedidoFinanceiro pedidoConcluido)
                 {
-                    if (Financeiro.Instancia != null && !Financeiro.Instancia.IsDisposed)
-                    {
-                        Financeiro.Instancia.AdicionarPedidoFinanceiro(pedidoConcluido);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Abra a tela Financeiro para visualizar os pedidos.");
-                    }
+                    PedidoStore.Pedidos.Add(pedidoConcluido);
 
+                    // limpa o painel
                     painel.Controls.Clear();
                     painel.Visible = false;
 
                     contadorPedidos++;
                 }
-                else
-                {
-                    MessageBox.Show("Erro: pedido inválido no painel.");
-                }
-            };
-
+            }; 
+            
+            painel.Controls.Add(btn);
+          
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

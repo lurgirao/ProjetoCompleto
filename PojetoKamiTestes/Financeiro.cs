@@ -19,15 +19,40 @@ namespace PojetoKamiTestes
             InitializeComponent();
             Instancia = this;
         }
+        public void RecarregarDados()
+        {
+            AtualizarGrid();
+        }
 
-        private void Financeiro_Load_1 (object sender, EventArgs e)
+        // 👇 JÁ EXISTE SEU CÓDIGO ACIMA
+
+        public void AtualizarGrid()
+        {
+            dataGridView1.Rows.Clear();
+
+            foreach (var pedido in PedidoStore.Pedidos)
+            {
+                dataGridView1.Rows.Add(
+                    pedido.DataHora.ToString("dd/MM/yyyy HH:mm"),
+                    pedido.Numero,
+                    pedido.Total.ToString("F2"),
+                    pedido.FormaPagamento
+                );
+            }
+        }
+
+        private void Financeiro_Load(object sender, EventArgs e)
         {
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.MultiSelect = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            AtualizarGrid();
         }
+
+
 
         public void AdicionarPedidoFinanceiro(PedidoFinanceiro pedido)
         {
@@ -61,10 +86,6 @@ namespace PojetoKamiTestes
 
         }
 
-        private void Financeiro_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
@@ -127,16 +148,15 @@ namespace PojetoKamiTestes
         private void btn_financeiro_Click(object sender, EventArgs e)
         {
             {
-                Financeiro tela = new Financeiro();
-                tela.Show();
+                
             }
         }
 
         private void btn_estoque_Click(object sender, EventArgs e)
         {
             {
-                Estoque tela = new Estoque();
-                tela.Show();
+                Financeiro.Instancia.Show();
+                Financeiro.Instancia.BringToFront();
             }
         }
 

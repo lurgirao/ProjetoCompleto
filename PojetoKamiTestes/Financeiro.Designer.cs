@@ -275,7 +275,7 @@
             this.Name = "Financeiro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Financeiro";
-            this.Load += new System.EventHandler(this.Financeiro_Load_1);
+            //this.Load += new System.EventHandler(this.Financeiro_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
